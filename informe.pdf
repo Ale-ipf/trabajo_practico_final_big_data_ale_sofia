@@ -1,0 +1,65 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 4 0 R /F2 5 0 R >> >> /Contents 6 0 R >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+endobj
+6 0 obj
+<< /Length 2692 >>
+stream
+BT /F2 18 Tf 48 796 Td (Informe ETL | SuperAhorro) Tj ET
+BT /F1 8 Tf 48 769 Td (Movimientos de stock | Fuente SQLite: data/stock.sqlite | 2.575 filas, 2.500 IDs distintos) Tj ET
+BT /F2 11 Tf 48 742 Td (Pipeline y validaciones) Tj ET
+BT /F1 9 Tf 48 726 Td (pipeline.py crea raw_movimientos, validos, rechazados, rechazados_limpios y tabla_final en stock.duckdb) Tj ET
+BT /F1 9 Tf 48 714 Td (sin modificar la fuente. Se aplican 11 reglas: ID no nulo y ?nico; fecha v?lida; producto permitido y) Tj ET
+BT /F1 9 Tf 48 702 Td (coherente con su ID; categor?a y proveedor coherentes; sucursal y tipo permitidos; cantidad entera) Tj ET
+BT /F1 9 Tf 48 690 Td (positiva y costo unitario positivo.) Tj ET
+BT /F1 9 Tf 48 676 Td (Se normalizaron fechas DD/MM/YYYY, espacios y may?sculas. Se corrigieron cantidades negativas por su) Tj ET
+BT /F1 9 Tf 48 664 Td (magnitud y se recuperaron datos faltantes de producto, categor?a, proveedor y costo usando el ID de) Tj ET
+BT /F1 9 Tf 48 652 Td (producto.) Tj ET
+BT /F2 11 Tf 48 633 Td (Filas por etapa) Tj ET
+BT /F1 9 Tf 58 617 Td (raw_movimientos                         2.575) Tj ET
+BT /F1 9 Tf 58 605 Td (validos                                 1.936) Tj ET
+BT /F1 9 Tf 58 593 Td (rechazados                                639) Tj ET
+BT /F1 9 Tf 58 581 Td (rechazados_limpios                        564) Tj ET
+BT /F1 9 Tf 58 569 Td (tabla_final (IDs ?nicos)                2.500) Tj ET
+BT /F1 9 Tf 48 557 Td (Motivos registrados: categor?a faltante/incoherente 152; IDs duplicados 148 filas; costo faltante/no) Tj ET
+BT /F1 9 Tf 48 545 Td (v?lido 130; producto faltante/no v?lido 127; cantidad no positiva 100. Los motivos se superponen.) Tj ET
+BT /F2 11 Tf 48 526 Td (Respuestas de negocio) Tj ET
+BT /F1 9 Tf 48 510 Td (Unidades vendidas por categor?a: Lacteos 11.060; Limpieza 10.952; Frutas 10.202; Bebidas 10.123; Almacen) Tj ET
+BT /F1 9 Tf 48 498 Td (9.564.) Tj ET
+BT /F1 9 Tf 48 484 Td (Mermas por sucursal: Centro 2.861; Sur 2.462; Norte 2.395 unidades.) Tj ET
+BT /F1 9 Tf 48 470 Td (Gasto en ingresos por proveedor \(ARS\): Ala $8.193.400; Verdurama $6.797.300; CocaCola $5.753.000; Molinos) Tj ET
+BT /F1 9 Tf 48 458 Td ($4.762.800; LaSerenisima $3.065.450.) Tj ET
+BT /F1 9 Tf 48 444 Td (Producto m?s vendido: Lavandina, 5.901 unidades.) Tj ET
+BT /F1 9 Tf 48 430 Td (Movimientos enero-junio: 2024: 117, 109, 110, 118, 126, 97; 2025: 103, 90, 95, 91, 103, 107.) Tj ET
+BT /F2 11 Tf 48 411 Td (Airflow) Tj ET
+BT /F1 9 Tf 48 395 Td (El DAG pipeline_stock_superahorro encadena las cinco etapas con horario 0 2 * * * y zona) Tj ET
+BT /F1 9 Tf 48 383 Td (America/Argentina/Buenos_Aires. Requiere Airflow en Linux/WSL2 y configurar ETL_PROJECT_ROOT.) Tj ET
+endstream
+endobj
+xref
+0 7
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000121 00000 n 
+0000000257 00000 n 
+0000000354 00000 n 
+0000000456 00000 n 
+trailer
+<< /Size 7 /Root 1 0 R >>
+startxref
+3200
+%%EOF
